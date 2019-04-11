@@ -128,6 +128,7 @@ export default class Calculator extends React.Component {
     return (
       <div>
         <Head>
+          <title>Calculator by Brandon Suen</title>
           <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js' />
         </Head>
         <section className={styles.calculator}>
