@@ -144,6 +144,13 @@ export default class Calculator extends React.Component {
           </button>
           <button
             className={styles.button}
+            id='subtract'
+            onClick={() => this._onClickOp('-')}
+          >
+            -
+          </button>
+          <button
+            className={styles.button}
             id='divide'
             onClick={() => this._onClickOp('/')}
           >
@@ -155,6 +162,13 @@ export default class Calculator extends React.Component {
             onClick={() => this._onClickOp('x')}
           >
             X
+          </button>
+          <button
+            className={styles.button}
+            id='add'
+            onClick={() => this._onClickOp('+')}
+          >
+            +
           </button>
           <button
             className={styles.button}
@@ -179,13 +193,6 @@ export default class Calculator extends React.Component {
           </button>
           <button
             className={styles.button}
-            id='subtract'
-            onClick={() => this._onClickOp('-')}
-          >
-            -
-          </button>
-          <button
-            className={styles.button}
             id='four'
             onClick={() => this._onClickNum('4')}
           >
@@ -204,13 +211,6 @@ export default class Calculator extends React.Component {
             onClick={() => this._onClickNum('6')}
           >
             6
-          </button>
-          <button
-            className={styles.button}
-            id='add'
-            onClick={() => this._onClickOp('+')}
-          >
-            +
           </button>
           <button
             className={styles.button}
@@ -233,9 +233,6 @@ export default class Calculator extends React.Component {
           >
             3
           </button>
-          <button className={styles.button} id='equals' onClick={this._solve}>
-            =
-          </button>
           <button
             className={styles.button}
             id='zero'
@@ -249,6 +246,9 @@ export default class Calculator extends React.Component {
             onClick={this._decimal}
           >
             .
+          </button>
+          <button className={styles.button} id='equals' onClick={this._solve}>
+            =
           </button>
         </section>
       </div>

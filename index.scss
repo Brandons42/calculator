@@ -8,12 +8,16 @@ $width: 50vh;
 
 .button {
   background-color: #343638;
-  box-shadow: black 5px 10px;
+  box-shadow: 0 8px 2px black;
   color: white;
   font-size: 2vh;
   height: $buttonHeight;
   margin: $margin;
   width: ($width - 2 * ($borderWidth + $padding + 3 * $margin)) / 3;
+}
+
+.button:hover {
+  box-shadow: 0 4px 2px black;
 }
 
 .calculator {
