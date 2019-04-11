@@ -1,22 +1,43 @@
+$borderWidth: 2vh;
+$buttonHeight: 4vh;
+$displayBottomMargin: 2vh;
+$height: 80vh;
 $margin: 2vh;
 $padding: 5vh;
 $width: 50vh;
 
 .button {
-	background-color: #343638;
-	box-shadow: black 5px 10px;
-	color: white;
-	height: 4vh;
-	margin: $margin;
-	width: ($width - 2 * $padding - 2 * $margin) / 3;
+  background-color: #343638;
+  box-shadow: black 5px 10px;
+  color: white;
+  font-size: 2vh;
+  height: $buttonHeight;
+  margin: $margin;
+  width: ($width - 2 * ($borderWidth + $padding + 3 * $margin)) / 3;
 }
 
 .calculator {
-	width: $width;
-	padding: $padding;
-	height: 70vh;
-	background-color: #343638;
-	border: 2vh solid #262626;
-	border-radius: 20px;
-	margin: auto;
+  width: $width;
+  margin: (100vh - $height) / 2 auto;
+  padding: $padding;
+  height: $height;
+  background-color: #343638;
+  border: $borderWidth solid #262626;
+  border-radius: 20px;
+}
+
+.display {
+  background-color: #64705a;
+  border-radius: 5px;
+  height: $height - $displayBottomMargin - 2 * ($borderWidth + $padding) - 6 *
+    $buttonHeight - 12 * $margin;
+  margin: 0 auto $displayBottomMargin;
+  padding: 2vh;
+  width: $width - 2 * ($borderWidth + $padding);
+}
+
+.displayText {
+  font-family: monospace;
+  font-size: 4vh;
+  word-wrap: break-word;
 }
