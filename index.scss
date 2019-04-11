@@ -1,0 +1,22 @@
+$margin: 2vh;
+$padding: 5vh;
+$width: 50vh;
+
+.button {
+	background-color: #343638;
+	box-shadow: black 5px 10px;
+	color: white;
+	height: 4vh;
+	margin: $margin;
+	width: ($width - 2 * $padding - 2 * $margin) / 3;
+}
+
+.calculator {
+	width: $width;
+	padding: $padding;
+	height: 70vh;
+	background-color: #343638;
+	border: 2vh solid #262626;
+	border-radius: 20px;
+	margin: auto;
+}
