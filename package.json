@@ -1,0 +1,14 @@
+{
+	"name": "calculator",
+	"version": "1.0.0",
+	"repository": "https://github.com/Brandons42/calculator.git",
+	"author": "Brandon <brandonsuendeveloper@gmail.com>",
+	"devDependencies": {
+		"@babel/core": "^7.4.3",
+		"@babel/plugin-proposal-class-properties": "^7.4.0",
+		"@babel/preset-env": "^7.4.3",
+		"@babel/preset-react": "^7.0.0",
+		"node-sass": "^4.11.0",
+		"parcel-bundler": "^1.12.3"
+	}
+}

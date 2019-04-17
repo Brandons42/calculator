@@ -6,6 +6,14 @@ $margin: 2vh;
 $padding: 5vh;
 $width: 50vh;
 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
 .button {
 	background-color: #343638;
 	box-shadow: 0 8px 2px black;
@@ -20,7 +28,7 @@ $width: 50vh;
 	box-shadow: 0 4px 2px black;
 }
 
-.calculator {
+#calculator {
 	width: $width;
 	margin: (100vh - $height) / 2 auto;
 	padding: $padding;
@@ -30,7 +38,13 @@ $width: 50vh;
 	border-radius: 20px;
 }
 
-.display {
+#display {
+	font-family: monospace;
+	font-size: 4vh;
+	word-wrap: break-word;
+}
+
+#screen {
 	background-color: #64705a;
 	border-radius: 5px;
 	height: $height - $displayBottomMargin - 2 * ($borderWidth + $padding) - 6 *
@@ -38,10 +52,4 @@ $width: 50vh;
 	margin: 0 auto $displayBottomMargin;
 	padding: 2vh;
 	width: $width - 2 * ($borderWidth + $padding);
-}
-
-.displayText {
-	font-family: monospace;
-	font-size: 4vh;
-	word-wrap: break-word;
 }
