@@ -59,16 +59,30 @@ export default class Calculator extends React.Component {
 		}
 	};
 
-	_onClickOp = op =>
-		this.setState({
-			display:
-				(this.state.display.endsWith(' ')
-					? this.state.display.substring(0, this.state.display.length - 3)
-					: this.state.display) +
-				' ' +
-				op +
-				' '
-		});
+	_onClickOp = op => {
+		let display;
+
+		const sub = () =>
+			this.state.display.substring(0, this.state.display.length - 3);
+
+		if (this.state.display.endsWith(' ')) {
+			if (op === '-') {
+				display = `${this.state.display}-`;
+			} else {
+				display = `${sub()} ${op} `;
+			}
+		} else if (this.state.display.endsWith('-')) {
+			if (op === '-') {
+				display = this.state.display;
+			} else {
+				display = `${sub()}${op} `;
+			}
+		} else {
+			display = `${this.state.display} ${op} `;
+		}
+
+		this.setState({ display });
+	};
 
 	_solve = () => {
 		const evaluate = str => {
